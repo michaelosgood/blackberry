@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import NewNav from "../../components/NewNav";
+import Footer from "../../components/Footer";
+import "./Detail.css";
 
 class Detail extends Component {
   state = {
@@ -18,14 +21,16 @@ class Detail extends Component {
 
   render() {
     return (
+      <div>
+      <NewNav />
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+            <div>
               <h1>
                 {this.state.book.title} by {this.state.book.author}
               </h1>
-            </Jumbotron>
+            </div>
           </Col>
         </Row>
         <Row>
@@ -44,6 +49,8 @@ class Detail extends Component {
           </Col>
         </Row>
       </Container>
+      <Footer />
+      </div>
     );
   }
 }

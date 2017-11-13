@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import NewNav from "../../components/NewNav";
+import Footer from "../../components/Footer";
+import "./Books.css";
 
 class Books extends Component {
   state = {
@@ -55,62 +58,66 @@ class Books extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Sign up for the waiting list!</h1>
-            </Jumbotron>
-            <form>
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <NewNav />
+          <Container fluid>
+            <Row>
+              <Col size="md-6">
+                <div>
+                  <h1>Sign up here!</h1>
+                </div>
+                <form>
+                  <Input
+                    value={this.state.title}
+                    onChange={this.handleInputChange}
+                    name="title"
+                    placeholder="Name (required)"
+                  />
+                  <Input
+                    value={this.state.author}
+                    onChange={this.handleInputChange}
+                    name="author"
+                    placeholder="Number of guests in party (required)"
+                  />
+                  <TextArea
+                    value={this.state.synopsis}
+                    onChange={this.handleInputChange}
+                    name="synopsis"
+                    placeholder="Describe yourself! (optional)"
+                  />
+                  <FormBtn
+                    disabled={!(this.state.author && this.state.title)}
+                    onClick={this.handleFormSubmit}
+                  >
+                    Submit Name
+                  </FormBtn>
+                </form>
+              </Col>
+              <Col size="md-6">
+                <div>
+                  <h1>List</h1>
+                </div>
+                {this.state.books.length ? (
+                  <List>
+                    {this.state.books.map(book => (
+                      <ListItem key={book._id}>
+                        <Link to={"/books/" + book._id}>
+                          <strong>
+                            {book.title} for {book.author}
+                          </strong>
+                        </Link>
+                        <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                      </ListItem>
+                    ))}
+                  </List>
+                ) : (
+                  <h3>No Results to Display</h3>
+                )}
+              </Col>
+            </Row>
+          </Container>
+        <Footer />
+      </div>
     );
   }
 }

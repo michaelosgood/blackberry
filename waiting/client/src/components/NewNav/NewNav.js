@@ -19,8 +19,8 @@ const NewNav = () => (
             <span className="icon-bar" />
             <span className="icon-bar" />
           </button>
-          <a className="navbar-brand" href="/">
-            Waiting
+          <a className="navbar-brand" href="/books">
+            Sign Up
           </a>
         </div>
       </div>
