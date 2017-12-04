@@ -1,0 +1,34 @@
+
+body {
+    background-image: url("../../images/spices.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    height: 40em;
+    margin-top: 0;
+    padding: 0;
+}
+
+h4 {
+    /* font-family: 'Anton', sans-serif; */
+        /* font-family: 'Ranchers', cursive; */
+        font-family: 'Shrikhand', cursive;
+        /* font-family: 'Boogaloo', cursive; */
+    }
+h1 {
+        /* font-family: 'Anton', sans-serif; */
+        /* font-family: 'Ranchers', cursive; */
+        font-family: 'Shrikhand', cursive;
+        /* font-family: 'Boogaloo', cursive; */
+}
+    
+/* Media Queries for mobile devices */
+@media screen and (max-width:640px) {
+        
+    h1 {
+        font-size:50px;
+    }
+    h4 {
+        font-size: 25px;
+    }
+}
