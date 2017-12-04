@@ -1,8 +1,12 @@
 .navbar-custom {
-    background-color: #white;
+    background-color: transparent;
     color: #c9c9c9;
 }
 .navbar-brand {
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
     color: white;
     font-size: 50px;
     text-shadow:

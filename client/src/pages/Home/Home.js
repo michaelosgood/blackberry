@@ -6,8 +6,6 @@ import { List, ListItem } from "../../components/List";
 import NewNav from "../../components/NewNav";
 import Footer from "../../components/Footer";
 import "./Home.css";
-import CheckInModal from "../../components/CheckInModal";
-import Center from 'react-center';
 
 class Home extends Component {
   state = {

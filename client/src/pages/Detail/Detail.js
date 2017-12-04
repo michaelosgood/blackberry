@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
-import Nav from "../../components/Nav";
+import NewNav from "../../components/NewNav";
 import "./Detail.css";
-import Quiz from "../../components/Quiz";
 import DeleteBtn from "../../components/DeleteBtn";
 import { Link } from "react-router-dom";
 
@@ -16,11 +14,11 @@ class Detail extends Component {
     name: "",
     partysize: 0,
     restaurant: {},
-    name: "",
+    Rname: "",
     zip: "",
     img: "",
     waittime: "",
-  };
+  }
 
   componentDidMount() {
     API.getRestaurant(this.props.match.params.id)
@@ -78,7 +76,7 @@ class Detail extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <NewNav />
           <Container fluid>
             <Row>
               <Col size="md-6">
@@ -115,10 +113,6 @@ class Detail extends Component {
 
               </Col>
               <Col size="md-6">
-                <div>
-                  <h2>For DB Validation</h2>
-                  <h2>Detele when done</h2>
-                </div>
                 {this.state.users.length ? (
                   <List>
                     {this.state.users.map(user => (

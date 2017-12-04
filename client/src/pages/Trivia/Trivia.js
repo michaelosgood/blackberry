@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../../components/Nav";
+import Nav from "../../components/NewNav";
 import Footer from "../../components/Footer";
 import Quiz from "../../components/Quiz";
 import "./Trivia.css";

@@ -93,7 +93,6 @@ class ResSignUp extends Component {
                     </FormBtn>
                   </form>
                 </Col>
-                // For submit validation
                 <Col size="md-4">
                   <div>
                     <h1>Near By Restaurants</h1>
@@ -104,7 +103,7 @@ class ResSignUp extends Component {
                         <ListItem key={restaurant._id}>
                           <Link to={"/restaurants/" + restaurant._id}>
                             <strong>
-                              {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} />
+                              {restaurant.name} at {restaurant.zip} <br/> <img src= {restaurant.img} alt="" />
                             </strong>
                           </Link>
                           <DeleteBtn onClick={() => this.deleteRestaurant(restaurant._id)} />
