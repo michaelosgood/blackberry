@@ -1,18 +1,10 @@
-/* body {
+body {
     background-image: url("../../images/spices.jpg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
-} */
-.navbar-inverse {
-    background-color: #c41200;
 }
-.navbar-inverse .navbar-brand {
-    color: white;
-}
-.navbar-brand { 
-    padding-left: 40%;
-}
+
 h1 {
     color: white;
     font-size: 100px;
@@ -22,11 +14,9 @@ h4 {
     color: white;
     font-size: 50px;
 }
-h1 {
-    color: white !important;
-    font-size: 298% !important;
-    text-shadow: none !important;
-    text-align: center;
-
+.wrapper {
+    /* font-family: 'Anton', sans-serif; */
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Boogaloo', cursive; */
 }
-

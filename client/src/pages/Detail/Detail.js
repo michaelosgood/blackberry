@@ -78,6 +78,7 @@ class Detail extends Component {
       <div>
         <NewNav />
           <Container fluid>
+          <div className="wrapper">
             <Row>
               <Col size="md-6">
                 <div>
@@ -133,6 +134,7 @@ class Detail extends Component {
               </Col>
 
             </Row>
+            </div>
           </Container>
       </div>
     );

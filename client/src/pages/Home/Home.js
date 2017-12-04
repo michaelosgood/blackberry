@@ -63,6 +63,7 @@ class Home extends Component {
           <Container fluid>
           <Row>
               <Col size="md-12">
+              <div className="wrapper">
                 <div>
                   <input type="text" name="search" placeholder="Search..."/>
                   <h1>Nearby Restaurants</h1>
@@ -85,6 +86,7 @@ class Home extends Component {
                 ) : (
                   <h3>No Results to Display</h3>
                 )}
+                </div>
               </Col>
             </Row>
           </Container>
